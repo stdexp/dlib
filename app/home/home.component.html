@@ -1,0 +1,21 @@
+<table class="table table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenomx</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of personne">
+                <td scope="row">{{p.id}}</td>
+                <td>{{p.nom}}</td>
+                <td>{{p.prenom}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning mr-2" (click)="btnEdit(p.id)">edit</button>
+                    <button type="button" class="btn btn-danger" (click)="deletePersonne(p.id)">delete</button>
+                </td>
+            </tr>
+        </tbody>
+</table>
